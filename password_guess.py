@@ -3,7 +3,7 @@
 password = 'a123456'
 guess_num = 3
  
-while True:
+while guess_num > 0:
     guess = input('Please input password: ')
     if guess == password:
         print('Sign in')
@@ -11,9 +11,11 @@ while True:
     else:
         guess_num -= 1
         print('Password is wrong')
-        print('You still have', guess_num, 'chances' )
-        if guess_num == 0:
+        if guess_num > 0:
+            print('You still have', guess_num, 'chances' )
+        else:
             print('Fail to sign in')
             break
+
 
 
